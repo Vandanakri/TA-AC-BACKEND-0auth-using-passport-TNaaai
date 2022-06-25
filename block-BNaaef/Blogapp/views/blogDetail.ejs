@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog Application</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="flex justify-content align-items container">
+        <ul class="flex login">
+          <li>
+            <a href="/blogs">All Blogs</a>
+          </li>
+          <ul class="login">
+            <li>
+              <a href="/blogs/new">Add Blog</a>
+            </li>
+          </ul>
+        </ul>
+        <ul class="flex login">
+          <li>
+            <a href="/users/logout">Logout</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container user">
+      <h1>Welcome to our website to read all the blogs.</h1>
+      <div>
+        <h3>Title: <%= blog.title%></h3>
+        <p>Description: <%= blog.description%></p>
+        <p>Author: <%= blog.author %></p>
+        <p>Likes: <%= blog.likes%></p>
+        <a href="/blogs/<%= blog.slug %>/edit">
+          <button>Edit</button>
+        </a>
+        <a href="/blogs/<%= blog.slug %>/delete">
+          <button>Delete</button>
+        </a>
+        <a href="/blogs/<%= blog.slug %>/likes">
+          <button>Like</button>
+        </a>
+        <a href="/blogs/<%= blog.slug %>/dislike">
+          <button>Dislike</button>
+        </a>
+      </div>
+      <div class="comment">
+        <form action="/blogs/<%= blog.slug %>/comments" method="post">
+          <textarea
+            name="content"
+            id=""
+            cols="30"
+            rows="5"
+            placeholder="Enter comment"
+          >
+          </textarea>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+      <h3>Comments</h3>
+      <hr />
+      <% blog.comments.forEach(comment => { %>
+      <div>
+        <p>Content: <%= comment.content%></p>
+        <p>Likes: <%= comment.likes%></p>
+        <p></p>
+        <a href="/blogs/<%= blog.slug %>/<%= comment._id%>/edit">
+          <button>Edit</button>
+        </a>
+        <a href="/blogs/<%= blog.slug %>/<%= comment._id%>/delete">
+          <button>Delete</button>
+        </a>
+        <a href="/blogs/<%= blog.slug %>/<%= comment._id%>/likes">
+          <button>Like</button>
+        </a>
+        <a href="/blogs/<%= blog.slug %>/<%= comment._id%>/dislike">
+          <button>Dislike</button>
+        </a>
+      </div>
+      <% }) %>
+    </main>
+  </body>
+</html>

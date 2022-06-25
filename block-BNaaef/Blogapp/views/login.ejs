@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog Application</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="flex justify-content align-items container">
+        <ul>
+          <li>
+            <a href="/users/login">Blogs</a>
+          </li>
+        </ul>
+        <ul class="flex login">
+          <li>
+            <a href="/users/login">Login</a>
+          </li>
+          <li>
+            <a href="/users/register">Register</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <h1>Welcome to Login Page</h1>
+      <div class="register">
+        <form action="/users/login" method="post">
+          <% if(error) { %>
+          <p><%= error %></p>
+          <% } %>
+          <label for="email"><b>Email</b></label>
+          <input
+            type="text"
+            placeholder="Enter Email"
+            name="email"
+            id="email"
+          />
+          <label for="password"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="password"
+            id="password"
+          />
+          <button type="submit" class="loginbtn">Login</button>
+        </form>
+        <a href="/auth/github">Login with github</a>
+      </div>
+    </main>
+  </body>
+</html>

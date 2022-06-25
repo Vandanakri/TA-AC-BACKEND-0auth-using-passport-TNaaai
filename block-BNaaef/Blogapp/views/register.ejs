@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog Application</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="flex justify-content align-items container">
+        <ul>
+          <li>
+            <a href="/users/">Blogs</a>
+          </li>
+        </ul>
+        <ul class="flex login">
+          <li>
+            <a href="/users/register">Register</a>
+          </li>
+          <li>
+            <a href="/users/login">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <h1>Welcome to Register Page</h1>
+      <div class="register">
+        <form action="/users/register" method="post">
+          <% if(error) { %>
+          <p><%= error %></p>
+          <% } %>
+          <label for="name"><b>First Name</b></label>
+          <input
+            type="text"
+            placeholder="Enter First Name"
+            name="firstname"
+            id="firstname"
+          />
+
+          <label for="name"><b>Last Name</b></label>
+          <input
+            type="text"
+            placeholder="Enter Last Name"
+            name="lastname"
+            id="lastname"
+          />
+
+          <label for="email"><b>Email</b></label>
+          <input
+            type="text"
+            placeholder="Enter Email"
+            name="email"
+            id="email"
+          />
+
+          <label for="password"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="password"
+            id="password"
+          />
+
+          <label for="city"><b>City</b></label>
+          <input type="text" placeholder="Enter City" name="city" id="city" />
+
+          <button type="submit" class="registerbtn">Register</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

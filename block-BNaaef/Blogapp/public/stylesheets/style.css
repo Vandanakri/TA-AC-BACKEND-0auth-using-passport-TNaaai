@@ -1,0 +1,221 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Custom Styling */
+
+.flex {
+  display: flex;
+}
+.justify-content {
+  justify-content: space-between;
+}
+.align-items {
+  align-items: center;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* header */
+
+.header {
+  padding: 2rem 0;
+  background-color: blanchedalmond;
+}
+.header a {
+  color: brown;
+}
+.login a {
+  margin-left: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  font-style: italic;
+  padding-top: 8rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.register {
+  width: 50%;
+  margin: 0 auto;
+}
+.register input {
+  width: 100%;
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  outline: none;
+}
+.register button {
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgb(94, 156, 94);
+}
+.user h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+}
+.addblog {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 10rem;
+}
+.addblog input {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  outline: none;
+}
+
+.blog {
+  width: 30%;
+  margin-top: 3rem;
+  padding: 1rem 1rem;
+  border: 1px solid black;
+}
+.blog p {
+  margin: 0.75rem 0;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog Application</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="flex justify-content align-items container">
+        <ul class="flex login">
+          <li>
+            <a href="/blogs">All Blogs</a>
+          </li>
+          <ul class="login">
+            <li>
+              <a href="/blogs/new">Add Blog</a>
+            </li>
+          </ul>
+        </ul>
+        <ul class="flex login">
+          <li>
+            <a href="/users/logout">Logout</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container user">
+      <fieldset class="form addblog">
+        <form action="/blogs/new" method="post">
+          <input
+            type="text"
+            name="title"
+            placeholder="Enter title"
+            value="<%= blog.title %>"
+          />
+          <input
+            type="text"
+            name="description"
+            id=""
+            placeholder="Enter details of Blog"
+            value="<%= blog.description %>"
+          />
+          <input
+            type="text"
+            name="author"
+            id=""
+            placeholder="Enter author name"
+            value="<%= blog.author %>"
+          />
+          <input class="submit" type="submit" value="Submit" />
+        </form>
+      </fieldset>
+    </main>
+  </body>
+</html>

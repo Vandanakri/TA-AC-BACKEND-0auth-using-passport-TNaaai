@@ -46,8 +46,8 @@ app.use(session({
   store: new MongoStore({ mongooseConnection: mongoose.connection }),
 }));
 
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
